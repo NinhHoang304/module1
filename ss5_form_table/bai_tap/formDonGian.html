@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+    <style>
+
+        table{
+            border: 20px solid lightblue;
+            border-collapse: collapse;
+            width: 70%;
+        }
+        tr, td{
+            font-size: 20px;
+            border-collapse: collapse;
+            padding: 20px;
+        }
+        th{
+            padding: 20px;
+            background-color: orangered;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form action="simpleForm" method="get">
+    <table>
+        <tr>
+            <th colspan="2">SỞ THÍCH CỦA BẠN</th>
+        </tr>
+        <tr>
+            <td style="float: right;color: blue">Họ và tên</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td style="float: right; color: blue">Email</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td style="float: right;color: blue">Sở thích</td>
+            <td style="color: orangered">
+                <input type="checkbox" name="hobby"> Thể thao
+                <input type="checkbox" name="hobby"> Âm nhạc
+                <input type="checkbox" name="hobby"> Đọc sách <br>
+                <input type="checkbox" name="hobby"> Thể thao
+                <input type="checkbox" name="hobby"> Âm nhạc
+                <input type="checkbox" name="hobby"> Đọc sách <br>
+                <span style="float: left"><input type="checkbox" name="hobby"> Đọc sách</span>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">Gửi thông tin</button>
+                <button type="reset">Nhập lại</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<form action="simpleForm2" method="get">
+    <table style="margin-top: 50px; color: blue; background-color: #f3fcae; border: none">
+        <tr>
+            <th colspan="2" style="background-color: lightblue;color: blue">ĐĂNG KÝ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <td>Full name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td> Date of birth</td>
+            <td><input type="date" name="dateOfBirth"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="nam"> Male
+                <input type="radio" name="nữ"> Female
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="textarea" name="address"></td>
+        </tr>
+        <tr>
+            <td>Class</td>
+            <td>
+                <select name="class">
+                    <option value="none">--Choose Class--</option>
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <option value="3">Class 3</option>
+                    <option value="4">Class 4</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type="number" name="phone"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">Submit form</button>
+                <button type="reset">Reset form</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
