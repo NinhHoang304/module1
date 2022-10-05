@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <title>Simple Form HTML</title>
 </head>
-<body>
+<body >
+<span style="font-family: 'Lucida Sans Unicode';'tahoma'">
 <h1><strong>Order Form</strong></h1>
 <br>
 <h3>What would you like to order?</h3>
-<br>
-<form action="/action_page.php">
-    <select name="buy" id="">
+<p></p>
+<form action="/action_page.php" style="font-size: 20px">
+    <select name="buy" id="1" style="width: 200px;height: 20px;">
         <option value="car">Car</option>
         <option value="bike">Bike</option>
         <option value="hat">Hat</option>
         <option value="coach">Coach</option>
     </select>
-</form>
-<form action="/action_page.php">
-    <BR>
-    <h3>How many would you like to order</h3>
     <br>
-    <input type="radio">
+    <h3>How many would you like to order</h3>
+    <p></p>
+    <input type="radio" value="$">1 - 10$
+    <br>
+    <input type="radio" value="$">2 - 20$
+    <br>
+    <input type="radio" value="$">3 - 25$
+    <br>
+    <h3>Name <span style="color: #ff0000;">*</span></h3>
+    <input type="text" id="username" value="Frist name" style="width: 150px;height: 20px;">
+    <input type="text" id="password" value="Last name" style="width: 150px;height: 20px;">
+    <br>
+    <h3>Email</h3>
+    <input type="text" id="email" style="width: 350px;height: 25px;">
+    <br>
+    <h3>Phone Number</h3>
+    <input type="number"id="phone_number"style="width: 100px;height: 25px"> -
+    <input type="number"id="phone_number"style="width: 100px;height: 25px"> -
+    <input type="number"id="phone_number"style="width: 100px;height: 25px">
+    <br>
+    <br>
+    <br>
+    <input type="button"value="Submit" style="height: 30px;width:100px;font-size: 15px ">
 </form>
+</span>
 </body>
 </html>
