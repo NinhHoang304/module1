@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+    <style>
+        body{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input type="number" id="inputFirstNumber" placeholder="First Number">
+    <input type="number" id="inputSecondNumber" placeholder="Second Number"><br><br>
+    <button type="submit" onclick="addition()">Addition (+)</button>
+    <button type="submit" onclick="Subtraction()">Subtraction (-)</button>
+    <button type="submit" onclick="Multiplication()">Multiplication (X)</button>
+    <button type="submit" onclick="division()">Division (/)</button>
+    <br>
+    <br>
+    Result <span id="result"></span>
+</body>
+<script>
+    function addition() {
+        let firstNumber = document.getElementById('inputFirstNumber').value;
+        let secondNumber = document.getElementById('inputSecondNumber').value;
+        let result = Number(firstNumber) + Number(secondNumber);
+        document.getElementById('result').innerHTML = "Addition: " + result;
+    }
+    function Subtraction() {
+        let firstNumber = document.getElementById('inputFirstNumber').value;
+        let secondNumber = document.getElementById('inputSecondNumber').value;
+        let result = Number(firstNumber) - Number(secondNumber);
+        document.getElementById('result').innerHTML = "Subtraction: " + result;
+    }
+    function Multiplication() {
+        let firstNumber = document.getElementById('inputFirstNumber').value;
+        let secondNumber = document.getElementById('inputSecondNumber').value;
+        let result = Number(firstNumber) * Number(secondNumber);
+        document.getElementById('result').innerHTML = "Multiplication: " + result;
+    }
+    function division() {
+        let firstNumber = document.getElementById('inputFirstNumber').value;
+        let secondNumber = document.getElementById('inputSecondNumber').value;
+        let result = Number(firstNumber) / Number(secondNumber);
+        document.getElementById('result').innerHTML = "Division: " + result;
+    }
+
+</script>
+</html>

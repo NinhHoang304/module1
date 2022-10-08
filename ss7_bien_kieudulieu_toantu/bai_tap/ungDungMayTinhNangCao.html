@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính nâng cao</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            padding: 20px;
+        }
+        table{
+            border: 1px solid darkgray;
+        }
+        th{
+            border: 3px solid white;
+        }
+        button{
+            font-size: 30px;
+            font-weight: normal;
+            width: 80px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                <div id="result" class="result"
+                     style="float: right; margin-right: 20px; font-size: 45px; max-width: 250px"
+                ></div>
+            </th>
+            <th>
+                <button class="btn" onclick="clean()" style="background-color: greenyellow">AC</button>
+            </th>
+        </tr>
+            <tr>
+                <th>
+                    <div class="number">
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <br>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <br>
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <br>
+                        <button class="btn" value="0">0</button>
+                        <button class="btn" value=".">.</button>
+                        <button class="btn" onclick="equal()" style="background-color: lightskyblue">=</button>
+                    </div>
+                </th>
+                <th>
+                    <div class="operation">
+                        <button class="btn" value="*">X</button>
+                        <br>
+                        <button class="btn" value="/">/</button>
+                        <br>
+                        <button class="btn" value="+">+</button>
+                        <br>
+                        <button class="btn" value="-">-</button>
+                    </div>
+                </th>
+            </tr>
+
+    </table>
+</body>
+<script>
+    // Tạo hàm nhận tất cả dữ liệu
+    const numbers = document.getElementsByClassName('btn');
+    const result = document.getElementById('result');
+    // Taoj vòng lặp nhận value từ button
+    for (let number of numbers){
+        number.addEventListener('click', function () {
+            result.innerHTML += this.value;
+        });
+    }
+    // Tạo hàm tính kết quả với hàm thực thi eval()
+    function equal() {
+        let res = result.innerHTML;
+        let output = eval(res);
+        result.innerHTML = output;
+    }
+    // Tạo hàm clean ô result
+    function clean() {
+        result.innerHTML = " ";
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

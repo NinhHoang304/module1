@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Money App</title>
+    <style>
+        table{
+            padding: 20px;
+            font-size: 20px;
+        }
+        th,td{
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number" id="amount"></td>
+            <td>
+                <select name="" id="selectCurrency1" style="width: 100%">
+                    <option value="VND" >VND</option>
+                    <option value="USD" >USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="selectCurrency2" style="width: 100%">
+                    <option value="VND" >VND</option>
+                    <option value="USD" >USD</option>
+                </select>
+            </td>
+            <td><button type="submit" onclick="currencyConvert()" style="background-color: blueviolet;color:white">Convert</button></td>
+        </tr>
+</body>
+<script>
+    function currencyConvert() {
+        let amou = document.getElementById('amount').value;
+        let select1 = document.getElementById('selectCurrency1').value;
+        let select2 = document.getElementById('selectCurrency2').value;
+        if (select1 == select2){
+            alert(amou);
+        }
+        if (select1 == 'VND' && select2 == 'USD'){
+            alert(amou/23000);
+        }
+        if (select1 == 'USD' && select2 == 'VND'){
+            alert(amou*23000);
+        }
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

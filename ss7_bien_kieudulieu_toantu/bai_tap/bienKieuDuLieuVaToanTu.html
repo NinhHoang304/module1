@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<script>
+    //Bài 1: Viết chương trình nhập điểm của 1 sinh viên
+    let inputPhysics = prompt('Nhập điểm Lý:');
+    let inputChemistry = prompt('Nhập điểm Hóa:');
+    let inputBiological = prompt('Nhập điểm Sinh:');
+    let phys =  parseFloat(inputPhysics);
+    let chemis = parseFloat(inputChemistry);
+    let bio = parseFloat(inputBiological);
+    let average = (phys + chemis + bio) / 3;
+    let total = phys + chemis + bio;
+    document.write('Điểm trung bình của bạn là: '+ average);
+    document.write('<br/>');
+    document.write('Tổng điểm của bạn là: '+ total);
+    document.write('<br/>');
+
+    //Bài 2: Viết chương trình nhập độ C và chuyển đổi sang độ F
+    let celsius = prompt('Nhập số độ C: ');
+    let cels = parseFloat(celsius);
+    let fahrenheit = cels * 1.8 + 32;
+    document.write('Số độ F là: ' + fahrenheit);
+    document.write('<br/>');
+
+    //Bài 3: Viết chương trình tính diện tích hình tròn
+    let radius = prompt('Nhập bán kính hình tròn: ');
+    let rad = parseFloat(radius);
+    let acreage = Math.PI * rad * rad;
+    document.write('Diện tích hình tròn là: '+ acreage);
+    document.write('<br/>');
+
+    // Bài 4: Viết chương trình tính chu vi hình tròn
+    let diameter = prompt('Nhập đường kính hình tròn: ');
+    let dia = parseFloat(diameter);
+    let perimeter = dia * Math.PI;
+    document.write('Chu vi của hình tròn là: '+ perimeter);
+
+
+</script>
+</body>
+</html>
