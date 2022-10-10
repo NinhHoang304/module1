@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt('Nhập a: '));
+    let b = parseFloat(prompt('Nhập b: '));
+    let c = parseFloat(prompt('Nhập c: '));
+    if (a != 0){
+        // dùng math pow tính bình phương
+        let delta = Math.pow(b,2) - (4*a*c);
+        if (delta > 0){
+            // dùng math sqrt tính căn bậc 2
+            let x1 = (-b + Math.sqrt(delta)) / (2*a);
+            let x2 = (-b - Math.sqrt(delta)) / (2*a);
+            alert('Phương trình có 2 nghiệm là: '+ x1,x2);
+        }else if (delta === 0){
+            let x3 = -b / (2*a);
+            alert('Phương trình có nghiệm kép là: '+ x3);
+        }else if (delta <0){
+            alert('Phương trình vô nghiệm');
+        }
+     }
+</script>
+</body>
+</html>
