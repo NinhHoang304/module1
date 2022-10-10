@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let principal = parseInt(prompt('Nhập số tiền ban đầu: '));
+    let month = parseInt(prompt('Nhập số tháng gửi: '));
+    let earnings = parseFloat(prompt('Nhập số lãi xuất hằng năm: '));
+
+    let earn = principal * ((month*30)/360) * (earnings/100);
+    alert('Số tiền lãi của bận là '+ earn);
+</script>
+</body>
+</html>
