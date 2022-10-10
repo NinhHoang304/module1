@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kWh = parseFloat(prompt('Nhập vào số chữ điện đã tiêu thụ: '));
+    if (kWh > 0 && kWh <= 50){
+        alert('Số tiền bạn phải trả là: '+ kWh*1678);
+    }else if (kWh > 50 && kWh <= 100){
+        alert('Số tiền bạn phải trả là: '+ kWh*1734);
+    }else if (kWh > 100 && kWh <= 200){
+        alert('Số tiền bạn phải trả là: '+ kWh*2014);
+    }else if (kWh > 200 && kWh <= 300){
+        alert('Số tiền bạn phải trả là: '+ kWh*2536);
+    }else if (kWh > 300 && kWh <= 400){
+        alert('Số tiền bạn phải trả là: '+ kWh*2834);
+    }else if (kWh > 400){
+        alert('Số tiền bạn phải trả là: '+ kWh*2927);
+    }else {
+        alert('Vui lòng nhập số kWh > 0')
+    }
+</script>
+</body>
+</html>

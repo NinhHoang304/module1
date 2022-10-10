@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let wage = parseFloat(prompt('Nhập số tiền lương (đơn vị: 1.000 -> 1.000.000): '));
+
+    if (wage <= 5000){
+        alert('Thuế thu nhập cá nhân của bạn là '+ wage*0.05);
+    }else if (wage > 5000 && wage <= 10000){
+        alert('Thuế thu nhập cá nhân của bạn là '+ wage*0.1);
+    }else if (wage > 10000 && wage <= 18000){
+        alert('Thuế thu nhập cá nhân của bạn là '+ wage*0.15);
+    }else if (wage > 18000 && wage <= 32000){
+        alert('Thuế thu nhập cá nhân của bạn là '+ wage*0.2);
+    }else if (wage > 32000 && wage <= 52000){
+        alert('Thuế thu nhập cá nhân của bạn là '+ wage*0.25);
+    }else if (wage > 52000 && wage <= 80000){
+        alert('Thuế thu nhập cá nhân của bạn là '+ wage*0.3);
+    }else if (wage > 80000){
+        alert('Thuế thu nhập cá nhân của bạn là '+ wage*0.35);
+    }else{
+        alert('Vui lòng nhập tiền lương > 0');
+    }
+</script>
+</body>
+</html>
