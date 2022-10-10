@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let saleTotal = parseFloat(prompt('Nhập vào doanh số bán hàng: '));
+    if (saleTotal >= 1000){
+        alert('Hoa hồng của bạn là: '+ saleTotal*0.1+'$');
+    }else if (saleTotal < 1000 && saleTotal >= 500 ){
+        alert('Hoa hồng của bạn là: '+ saleTotal*0.05+'$');
+    }else {
+        alert('Doanh số bạn không đủ để nhận hoa hồng')
+    }
+</script>
 </body>
 </html>
