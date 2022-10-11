@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .grid{
+            padding-left: 400px;
+            padding-top: 300px;
+        }
+        input{
+            width: 50px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="grid">
+    <h2>Do you love me? Click me??</h2>
+    <input type="submit" value="Yes" onclick="yesClick()">
+    <input type="submit" value="No" id="inputNo" onmousemove="randomMove()" style="position: absolute; margin-left: 20px">
+</div>
+</body>
+<script>
+    function yesClick() {
+        alert('<3');
+    }
+    function randomMove() {
+        let random = document.getElementById('inputNo');
+        random.style.position = 'relative';
+        random.style.left = Math.floor(Math.random()*500)+'px';
+        random.style.top = Math.floor(Math.random()*500)+'px';
+        random.style.bottom = Math.floor(Math.random()*300)+'px';
+        random.style.right = Math.floor(Math.random()*500)+'px';
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

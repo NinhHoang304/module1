@@ -16,7 +16,7 @@
     <table>
         <tr>
             <td><img src="./img/1-1.jpg" alt="meo1" id="cat1" onclick="hideShow()"></td>
-            <td><img src="./img/2-1.jpg" alt="meo2" id="dog1" onclick="hideShow()" style="display: none"></td>
+<!--            <td><img src="./img/2-1.jpg" alt="meo2" id="dog1" onclick="hideShow()" style="display: none"></td>-->
         </tr>
         <tr>
             <td><img src="./img/1-2.jpg" alt="meo1" id="cat2" onclick="hideShow()"></td>
@@ -32,8 +32,19 @@
 </div>
 <script>
     function hideShow() {
-        document.getElementById('cat1').style.display = 'none';
-        document.getElementById('dog1').style.display = 'block';
+        let cat1 = "./img/1-1.jpg";
+        let imgSrc = document.getElementById("cat1");
+        let currentSrc = document.getElementById("cat1").src;
+        console.log(currentSrc)
+        switch (currentSrc) {
+            case "http://localhost:63342/module1/ss9_cau_truc_dieu_kien_2/bai_tap/img/1-1.jpg":
+                imgSrc.src = "./img/2-1.jpg";
+                break;
+        }
+    //     if (cat1 == (src="./img/1-1.jpg")) {
+    //     document.getElementById('cat1').src = "./img/2-1.jpg";
+    // }else{
+    //     document.getElementById('cat1').src = "./img/1-1.jpg";
     }
 </script>
 </body>
