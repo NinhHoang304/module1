@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Click me: <input type="submit" value="Bất đầu" onclick="play()">
+<script>
+    function play() {
+        let randomNum = parseInt(prompt('Nhập vào khoảng số bạn muốn đoán '));
+        let randomPick = parseInt((Math.random()*randomNum));
+        let value = parseInt(prompt('Nhập vào số bạn muốn đoán'));
+        let count = 0;
+        while (randomPick !== value){
+            count++;
+            if (count === 3){
+                alert('Bạn hết lượt đoán');
+                break;
+            }else if (value > randomPick){
+                alert('Vui lòng nhập số nhỏ hơn');
+            }else if (value < randomPick){
+                alert('Vui lòng nhập số lớn hơn');
+            }
+            value = parseInt(prompt('Nhập lại số bạn muốn đoán'));
+        }
+        while (randomPick === value){
+            alert('Chúc mừng bạn đã đoán đúng');
+            break;
+        }
+        // while (value === randomPick){
+        //     alert('Chúc mừng bạn đoán đúng số ngẫu nhiên');
+        //     break;
+        // }
+        // while (value > randomPick){
+        //     value = parseInt(prompt('Vui lòng nhập số nhỏ hơn'));
+        // }
+        // while (value < randomPick){
+        //     value = parseInt(prompt('Vui lòng nhập số lớn hơn'));
+        // }
+    }
+</script>
+</body>
+</html>
