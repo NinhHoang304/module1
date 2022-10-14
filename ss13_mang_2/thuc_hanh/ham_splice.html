@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["code", "gym", "vn", 2022];
+    document.write(arr);
+    document.write("<br/>");
+    arr.splice(2, 1);
+    document.write(arr);
+
+    let students = [
+        {
+            id: 1,
+            name: "nguyen van a",
+            address: "da nang"
+        },
+        {
+            id: 2,
+            name: "nguyen van b",
+            address: "ha noi"
+        }
+    ]
+    console.log(students);
+    for (let i = 0; i < students.length;i++){
+        if (students[i].id === 2){
+            students.splice(i,1);
+        }
+    }
+</script>
+</body>
+</html>
