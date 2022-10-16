@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Check integer V in the array</h3>
+<input type="text" id="txtValue" placeholder="Enter a integer">
+<input type="button" id="btnAdd" value="Add" onclick="addElementToArray();">
+<input type="button" id="btnAddIntV" value="Add Int V" onclick="addVToArray();"><br><br>
+<input type="button" id="btnResult" value="Check element of integer V in array" onclick="checkIntV()">
+<br><br>
+Array: <span id="displayArray"></span>
+<br><br>
+Result: <span id="result"></span>
+<script>
+    let x = 0;
+    let array = Array();
+    let intV = 0;
+
+    function addElementToArray() {
+        x = parseInt(document.getElementById('txtValue').value);
+        array.push(x);
+        document.getElementById('displayArray').innerHTML = array;
+        document.getElementById('txtValue').value = "";
+    }
+    function addVToArray() {
+        intV = parseInt(document.getElementById('txtValue').value);
+        array.push(intV);
+        document.getElementById('displayArray').innerHTML = array;
+        document.getElementById('txtValue').value = "";
+    }
+    function checkIntV() {
+        for (let i = 0;i < array.length; i++){
+            if (array[i] === intV ){
+                break;
+            }else {
+                document.getElementById('result').innerHTML = "V is not in the array";
+            }
+        }document.getElementById('result').innerHTML = "V is in the array";
+    }
+</script>
+</body>
+</html>

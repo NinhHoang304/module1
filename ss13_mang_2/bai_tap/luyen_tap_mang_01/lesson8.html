@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Sắp xếp theo thứ tự giảm dần</h3>
+<input type="text" id="txtValue">
+<input type="button" value="Add" onclick="addInteger()">
+<input type="button" value="Display" onclick="display()">
+<br><br>
+Array: <span id="displayArray"></span>
+<br><br>
+Result: <span id="result"></span>
+<script>
+    let array = Array();
+    let x = 0;
+    function addInteger() {
+        x = parseInt(document.getElementById('txtValue').value);
+        array.push(x);
+        document.getElementById('displayArray').innerHTML = array;
+        document.getElementById('txtValue').value = "";
+    }
+    function display() {
+        array =  array.sort();
+        array = array.reverse();
+        document.getElementById('result').innerHTML = array;
+    }
+</script>
+</body>
+</html>

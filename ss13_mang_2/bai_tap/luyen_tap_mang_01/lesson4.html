@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Đảo ngược mảng</h3>
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnAdd" value="Add" onclick="addElementToArray();"/>
+    <input type="button" id="btnDisplay" value="Display Array" onclick="displayArray();"/><br><br>
+    <input type="button" id="btnReverse" value="Reverse" onclick="reverseArray();"/><br><br>
+    Result: <span id="result"></span>
+<script>
+    let x = 0;
+    let array = Array();
+    let result = 0;
+    function addElementToArray() {
+        array[x] = parseInt(document.getElementById('txtValue').value);
+        alert(array[x] + " đã được thêm vào vị trí "+ x);
+        // Tắng x lên 1 sau mỗi lần nhập để đổi vị trí nhập phần tử vào
+        x++;
+        // tạo ô trống để nhập lại sau khi nhập phần tử số nguyên
+        document.getElementById("txtValue").value = "";
+    }
+    // hiển thị các thành phần trong mảng nhập vào
+    function displayArray() {
+        result = array;
+        document.getElementById('result').innerHTML = result;
+    }
+    function reverseArray() {
+        // dungf hàm reverse() để đảo được cái phần tử trong mảng
+        result = array.reverse();
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+</body>
+</html>
