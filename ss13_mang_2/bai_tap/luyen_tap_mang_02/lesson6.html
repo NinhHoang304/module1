@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong 1 chuỗi </title>
+</head>
+<body>
+<h3>Replace Array</h3>
+<input type="text" id="txtValue" placeholder="Nhập ký tự">
+<input type="button" value="Relace" onclick="add()">
+<br><br>
+Array: <span id="arr"></span>
+<script>
+    let x;
+    let a = Array();
+    let change;
+
+    function add() {
+        x = document.getElementById('txtValue').value;
+        change = x.replace('-', '_');
+        a.push(change);
+        document.getElementById('arr').innerHTML = a;
+        document.getElementById('txtValue').value = "";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong 1 chuỗi </title>
+</head>
+<body>
+<h3>Reverse Array</h3>
+<input type="text" id="txtValue" placeholder="Nhập 1 chuỗi">
+<input type="button" value="Add" onclick="add()">
+<input type="button" value="Count" onclick="count()">
+<br><br>
+Array: <span id="arr"></span>
+<br><br>
+Result: <span id="result"></span>
+<script>
+    let str;
+    let a = Array();
+    let countStr = 0;
+
+    function add() {
+        str = document.getElementById('txtValue').value;
+        a = str.split(' ');
+        document.getElementById('arr').innerHTML = a;
+        document.getElementById('txtValue').value = "";
+    }
+
+    function count() {
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] !== "") {
+                countStr++;
+            }
+        }
+        document.getElementById('result').innerHTML = countStr;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Check string</h3>
+<input type="text" id="txtValue" placeholder="Enter 1 string">
+<input type="button" value="Add String First" onclick="add1()">
+<input type="button" value="Add String Second" onclick="add2()">
+<br><br>
+<input type="button" value="Check" onclick="check()">
+<br><br>
+Result: <span id="result"></span>
+</body>
+<script>
+    let x;
+    let y;
+    let a = Array();
+    let b = Array();
+    function add1() {
+        x = document.getElementById('txtValue').value;
+        a = x.split(' ');
+        document.getElementById('txtValue').value = "";
+    }
+    function add2() {
+        y = document.getElementById('txtValue').value;
+        b = y.split(' ');
+        document.getElementById('txtValue').value = "";
+    }
+    function check() {
+        if (x === y){
+            document.getElementById('result').innerHTML = "2 chuỗi giống nhau";
+        }else {
+            document.getElementById('result').innerHTML = "2 chuỗi khác nhau";
+        }
+    }
+</script>
+</html>

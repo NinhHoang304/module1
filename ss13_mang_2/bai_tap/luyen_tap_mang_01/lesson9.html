@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nối mảng</h3>
+<input type="text" id="txtValue">
+<input type="button" value="Add Array A" onclick="addArrayA()">
+<input type="button" value="Add Array B" onclick="addArrayB()">
+<br><br>
+<input type="button" value="Display Array C" onclick="displayArrayC()">
+<br><br>
+Array A: <span id="arrayA"></span>
+<br><br>
+Array B: <span id="arrayB"></span>
+<br><br>
+Result Array C: <span id="result"></span>
+
+</body>
+<script>
+    let a = Array();
+    let b = Array();
+    let c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    let x = 0;
+    let y = 0;
+    let connectArray;
+
+    function addArrayA() {
+        x = parseInt(document.getElementById('txtValue').value);
+        a.push(x);
+        document.getElementById('arrayA').innerHTML = a;
+        document.getElementById('txtValue').value = "";
+    }
+
+    function addArrayB() {
+        y = parseInt(document.getElementById('txtValue').value);
+        b.push(y);
+        document.getElementById('arrayB').innerHTML = b;
+        document.getElementById('txtValue').value = "";
+    }
+
+    function displayArrayC() {
+        connectArray = c.concat(a, b);
+        document.getElementById('result').innerHTML = connectArray;
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

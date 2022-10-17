@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Reverse Array</h3>
+<input type="text" id="txtValue">
+<input type="button" value="Add" onclick="add()">
+<input type="button" value="Print Reverse Array" onclick="printArray()">
+<br><br>
+Array: <span id="arr"></span>
+<br><br>
+Result Array: <span id="result"></span>
+</body>
+<script>
+    let x = 0
+    let a = Array();
+
+    function add() {
+        x = document.getElementById('txtValue').value;
+        a.push(x);
+        document.getElementById('arr').innerHTML = a;
+        document.getElementById('txtValue').value = "";
+    }
+
+    function printArray() {
+        a = a.reverse();
+        document.getElementById('result').innerHTML = a;
+    }
+</script>
+</html>
