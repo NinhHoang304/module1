@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNum = parseInt(prompt('Enter a integer'));
+
+    function checkPositiveInteger(number) {
+        if (number > 0) {
+            alert('This number is a positive integer');
+        } else if (number < 0 || number === 0) {
+            alert('This number is not a positive integer');
+        } else {
+            alert('Please enter a integer number');
+        }
+    }
+
+    checkPositiveInteger(inputNum);
+</script>
+</body>
+</html>

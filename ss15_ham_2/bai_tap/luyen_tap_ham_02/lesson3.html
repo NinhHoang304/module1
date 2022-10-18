@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function factorial(number) {
+        let caculator = 1;
+        for (let i = 1;i <= number;i++){
+            caculator *= i;
+        }
+        alert("Factorial = " + caculator);
+    }
+    let inputNum = +prompt('Enter a integer ');
+    factorial(inputNum);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNum = parseInt(prompt("Enter the range of integer numbers array"));
+    function reverseArray(arr) {
+        let array = [];
+        for (let i = 0; i < arr; i++) {
+            array[i] = parseInt(prompt("Enter a integer number "));
+            //array.push(array[i]);
+        }
+        let reverse = array.reverse();
+        alert(reverse);
+    }
+    reverseArray(inputNum);
+</script>
+</body>
+</html>

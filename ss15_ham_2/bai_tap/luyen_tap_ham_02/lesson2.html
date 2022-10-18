@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function acreage(number) {
+        let area = number * number;
+        document.write("Area of " + number + " = " + area + "<br>");
+    }
+
+    let inputNum = parseFloat(prompt('Enter a number '));
+    acreage(inputNum);
+
+    function perimeter(a, b) {
+        let peri = (a + b) * 2
+        document.write('Perimeter = ' + peri);
+    }
+
+    let inputA = parseFloat(prompt('Enter the longs '));
+    let inputB = parseFloat(prompt('Enter the width '));
+    perimeter(inputA, inputB);
+</script>
+</body>
+</html>
