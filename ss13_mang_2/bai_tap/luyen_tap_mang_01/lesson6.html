@@ -18,6 +18,8 @@ Result: <span id="result"></span>
     let x = 0;
     let array = Array();
     let intV = 0;
+    let count = 0;
+    //let flag = true;
 
     function addElementToArray() {
         x = parseInt(document.getElementById('txtValue').value);
@@ -25,20 +27,24 @@ Result: <span id="result"></span>
         document.getElementById('displayArray').innerHTML = array;
         document.getElementById('txtValue').value = "";
     }
+
     function addVToArray() {
         intV = parseInt(document.getElementById('txtValue').value);
-        array.push(intV);
-        document.getElementById('displayArray').innerHTML = array;
+        alert('Đã nhập vào ' + intV);
         document.getElementById('txtValue').value = "";
     }
+
     function checkIntV() {
-        for (let i = 0;i < array.length; i++){
-            if (array[i] === intV ){
-                break;
-            }else {
-                document.getElementById('result').innerHTML = "V is not in the array";
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === intV) {
+                count++;
             }
-        }document.getElementById('result').innerHTML = "V is in the array";
+        }
+        if (count > 0) {
+            document.getElementById('result').innerHTML = "V is in the array " + count + " time";
+        } else {
+            document.getElementById('result').innerHTML = "V is not in the array";
+        }
     }
 </script>
 </body>

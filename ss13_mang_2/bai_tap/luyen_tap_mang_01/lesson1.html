@@ -6,12 +6,15 @@
 </head>
 <body>
 <script>
-    let numbers = [-2,-5,0,4,9,12,20,32,53];
-    for (let i = 0;i < numbers.length;i++){
-        if (numbers[i] >= 10){
-            document.write(numbers[i],"<br/>");
+    let numbers = [-2, -5, 0, 4, 9, 12, 20, 32, 53];
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] >= 10) {
+            document.write(numbers[i] + ", ");
+            count++;
         }
     }
+    document.write('Có ' + count + " số nguyên lớn hơn hoặc bằng 10");
 </script>
 </body>
 </html>

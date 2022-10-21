@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    s1 = s1.split('');
+    let s2 = "adcaa";
+    s2 = s2.split('');
+    let count = 0;
+    function commonCharacterCount(s1, s2) {
+        for (let i = 0;i < s1.length;i++){
+            for (let j = 0;j< s2.length;j++){
+                if (s1[i] == s2[j]){
+                    s1.splice(i,1);
+                    s2.splice(j,1);
+                    count++;
+                }
+            }
+        }
+    }
+    commonCharacterCount(s1, s2);
+    alert(count);
+</script>
+</body>
+</html>

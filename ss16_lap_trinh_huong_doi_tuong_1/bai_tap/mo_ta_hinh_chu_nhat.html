@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="drawRect" width="1000px" height="1000px"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.hieght = height;
+        }
+
+        getArea() {
+            return this.width * this.hieght;
+        }
+
+        getPerimeter() {
+            return (this.width + this.hieght) * 2;
+        }
+
+        drawRectangle() {
+            let ctx = document.getElementById('drawRect').getContext("2d");
+            ctx.beginPath();
+            ctx.rect(100, 100, this.width, this.hieght);
+            ctx.fill();
+        }
+
+        setWidthAndHeight(width, height) {
+            this.width = width;
+            this.hieght = height;
+        }
+    }
+
+    let rectangle = new Rectangle(150, 100);
+    rectangle.drawRectangle();
+    rectangle.setWidthAndHeight(250, 200);
+    let area = rectangle.getArea();
+    alert("Dien tich hinh chu nhat la " + area);
+    let perimeter = rectangle.getPerimeter();
+    alert('Chu vi hinh chu nhat la ' + perimeter);
+
+</script>
+</body>
+</html>
