@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight = weight
+        }
+
+        decrease() {
+            return this.weight--;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender === "male") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGender(gender) {
+            return this.gender = gender;
+        }
+
+        checkApple(apple) {
+            if (apple.isEmpty()) {
+                document.writeln("hết táo rồi");
+            } else {
+                document.writeln("vẫn còn táo");
+            }
+        }
+
+        eatApple(apple) {
+            if (apple.isEmpty() === false) {
+                this.weight++;
+                return this.weight;
+            }
+        }
+
+        say(string) {
+            return document.writeln(string);
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    let apple = new Apple(100);
+    let adam = new Human("Adam", "Male", 65);
+    document.writeln("hi iam " + adam.name + " " + adam.gender + " " + adam.weight + "<br>");
+    let eva = new Human("Eva", "Female", 55);
+    document.writeln("hi iam " + eva.name + " " + eva.gender + " " + eva.weight + "<br>");
+    document.write("táo còn " + apple.decrease() + "<br>" + "<br>");
+    while (apple.weight > 0) {
+        adam.eatApple(apple);
+        document.write("adam weight " + adam.weight + "<br>");
+        document.write("táo còn " + apple.decrease() + "<br>" + "<br>");
+        eva.eatApple(apple);
+        document.write("eva weight " + eva.weight + "<br>");
+        document.write("táo còn " + apple.decrease() + "<br>" + "<br>");
+
+    }
+    adam.checkApple(apple);
+
+</script>
+</body>
+</html>
