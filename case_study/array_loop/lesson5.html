@@ -3,10 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 0.5px solid black;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-<script>
+<h2>Danh sách các loại thức uống</h2>
+<table id="list">
 
+</table>
+<script>
+    let menu = ['Cafe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa'];
+
+    //display menu
+    function displayMenu() {
+        let data = "";
+        let index = 1;
+        for (let i = 0; i < menu.length; i++) {
+            data += "<tr>";
+            data += "<td style='text-align: center'>" + index++ + "</td>";
+            data += "<td>" + menu[i] + "</td>";
+            data += "<td><input type='button' value='Chọn' onclick='choose(" + i + ")'/></td>";
+            data += "<td style='width: 100px; text-align: center'><span id=" + "tamTinh" + i + "></span></td>";
+            data += "</tr>";
+        }
+        data += "<tr>";
+        data += "<td style='text-align: center'>" + "7" + "</td>";
+        data += "<td>" + "Thoát gọi món" + "</td>";
+        data += "<td colspan='2' style='text-align: center'><input type='button' value='Thoát' onclick='exits()'/></td>";
+        data += "</tr>";
+        document.getElementById('list').innerHTML = data;
+    }
+
+    displayMenu();
+    // choose
+    let price = [15000, 30000, 25000, 25000, 10000, 20000];
+    let sum = 0;
+
+    function choose(i) {
+        let sl = parseInt(prompt('Thức uống này có giá là ' + price[i] + "." + "Nhập số lượng thức uống: "));
+        document.getElementById('tamTinh' + i).innerHTML = (sl * price[i]) + " Vnd";
+        sum += (sl * price[i]);
+    }
+
+    function exits() {
+        alert("Tổng tiền của bạn là " + sum + " Vnd");
+        sum = 0;
+        displayMenu();
+    }
 </script>
 </body>
 </html>
