@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập cá nhân</h1>
+<input type="text" id="txtValue" placeholder="Nhập lương">
+<input type="button" value="Check" onclick="tinhLuong()">
+<br><br>
+Result: <span id="result"></span>
+<script>
+    function tinhLuong() {
+        let luong = parseInt(document.getElementById('txtValue').value);
+        let caculator = 0;
+        if (luong >= 15000000) {
+            caculator = luong * 0.2;
+            document.getElementById('result').innerHTML = "Thuế thu nhập cá nhân của bạn là 20% và bạn phải đóng thuế là "+caculator;
+        }else if (luong >= 7000000 && luong < 15000000){
+            caculator = luong * 0.1;
+            document.getElementById('result').innerHTML = "Thuế thu nhập cá nhân của bạn là 10% và bạn phải đóng thuế là "+caculator;
+        }else if (luong < 7000000){
+            caculator = luong * 0.05;
+            document.getElementById('result').innerHTML = "Thuế thu nhập cá nhân của bạn là 5% và bạn phải đóng thuế là "+caculator;
+        }else {
+            alert("Vui lòng nhập đúng");
+        }
+    }
+</script>
+</body>
+</html>

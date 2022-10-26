@@ -6,18 +6,19 @@
 </head>
 <body>
 <script>
-    let x = 4, y = 5;
-    for (let i = 0; i < x; i++) {
-        for (let j = 0; j < y; j++) {
-            if (i === 0 || j === 0 || i === x-1 || j === y-1){
+    let h = 5;
+    for (let i = 1; i <= h; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (i === h) {
+                document.write("*")
+            } else if (j === 1 || j === i) {
                 document.write("*");
-            }else {
+            } else {
                 document.write("&nbsp&nbsp")
             }
         }
-        document.write("<br>")
+        document.write("<br>");
     }
-
 </script>
 </body>
 </html>

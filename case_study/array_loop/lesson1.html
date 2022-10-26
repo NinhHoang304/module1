@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1,5,2,4,1];
+    let prefixSums = 0;
+    let b = [];
+    for (let i = 0;i < a.length;i++){
+        prefixSums += a[i];
+        b.push(prefixSums);
+    }
+    alert(b);
+</script>
+</body>
+</html>
