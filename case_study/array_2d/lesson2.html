@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let arr2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    let arr2d = [arr1, arr2];
+    let count = 0;
+    //let flag = true;
+    let arrayPrime = [];
+    for (let i = 0; i < arr2d.length; i++) {
+        for (let j = 0; j < arr2d[i].length; j++) {
+            for (let x = 1; x <= arr2d[i][j]; x++) {
+                if (arr2d[i][j] % x === 0) {
+                    count++
+                }
+            }
+            if (count === 2) {
+                arrayPrime.push(arr2d[i][j])
+            }
+            count = 0;
+        }
+    }
+    alert("tổng số nguyên là " + arrayPrime.length + " và các số nguyên là " + arrayPrime);
+</script>
+</body>
+</html>

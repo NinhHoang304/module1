@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = "cabca";
+    let arrString = string.split("");
+    let differentSymbolsNaive = [];
+
+    for (let i = 0; i < arrString.length ; i++) {
+        if (differentSymbolsNaive.indexOf(arrString[i]) === -1 ){
+            differentSymbolsNaive.push(arrString[i]);
+        }
+    }
+    alert("Có 3 ký tự khác nhau là " + differentSymbolsNaive);
+</script>
+</body>
+</html>
