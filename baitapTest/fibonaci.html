@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputWidth = +prompt('Nhập vào chiều dài của mảng ');
+    let array = [];
+
+    function getWidthOfArray(width, arr) {
+        let numberInteger = 0;
+        for (let i = 0; i < width; i++) {
+            numberInteger = +prompt('Nhập vào 1 số nguyên ');
+            arr.push(numberInteger);
+        }
+        alert('Hiển thị phần tử đã nhập vào mảng ' + arr);
+    }
+
+    getWidthOfArray(inputWidth, array);
+
+    function getFibonacci(arr) {
+        let a = 0;
+        let b = 1;
+        let fibonacci = 0;
+        let fibonacciArray = [];
+        for (let i = 0; i < 15; i++) {
+            fibonacciArray.push(a);
+            fibonacci = a + b;
+            a = b;
+            b = fibonacci;
+        }
+        console.log(fibonacciArray);
+        let arrayResult = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < fibonacciArray.length; j++) {
+                if (arr[i] === fibonacciArray[j]) {
+                    arrayResult.push(arr[i]);
+                    arrayResult.splice(arr[i], 1);
+                }
+            }
+        }
+        alert("Những số fibonacci trong mảng nhập vào là: " + arrayResult.sort());
+    }
+
+    getFibonacci(array);
+</script>
+</body>
+</html>

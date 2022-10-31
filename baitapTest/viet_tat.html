@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputString = +prompt('Nhập vào chiều dài mảng chứa ký tự ');
+    let array = [];
+
+    function checkCharacter(char, arrStr) {
+        if (char < 2) {
+            alert("Chuỗi chỉ có 1 từ nên không cần viết tắt ");
+        } else {
+            getString(char);
+            displayArray(arrStr);
+            upperCaseFirstCharacter(arrStr);
+        }
+    }
+
+    checkCharacter(inputString, array);
+
+    function getString(str) {
+        let string = "";
+        for (let i = 0; i < str; i++) {
+            string = prompt('Nhập vào chuỗi ký tự ');
+            string = string.trim();
+            array.push(string);
+        }
+    }
+
+    function displayArray(arr) {
+        alert("Hiển thị các phần tử chuỗi trong mảng " + arr);
+    }
+
+    function upperCaseFirstCharacter(check) {
+        let arrayResult = [];
+        for (let i = 0; i < check.length; i++) {
+                arrayResult.push(check[i].charAt(0));
+        }
+        console.log(arrayResult);
+        alert('Cụm từ viết tắt là ' + arrayResult.join('').toUpperCase());
+    }
+
+</script>
+</body>
+</html>

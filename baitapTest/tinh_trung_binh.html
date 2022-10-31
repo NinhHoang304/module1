@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputWidth = +prompt('Nhập chiều dài chuỗi số nguyên ( < = 50 ): ');
+    let array = [];
+    let result = 0;
+
+    function checkInputWidth(check) {
+        if (check > 50) {
+            alert("Vui lòng nhập độ dài chuỗi nhỏ hơn 51");
+        } else {
+            inputInteger(inputWidth);
+            displayArray(array);
+            averageValue();
+        }
+    }
+
+    checkInputWidth(inputWidth);
+
+    function inputInteger(width) {
+        let number = 0;
+        for (let i = 0; i < width; i++) {
+            number = +prompt("Nhập số nguyên bất kỳ ");
+            array.push(number);
+        }
+    }
+
+    function displayArray(arr) {
+        alert("Hiển thị số phần tử đã nhập vào mảng: " + arr);
+    }
+
+    function averageValue() {
+        let sum = 0;
+        let arrayResult = [];
+        for (let i = 0; i < array.length; i++) {
+            if (i % 3 === 0 && array[i] % 5 === 0) {
+                arrayResult.push(array[i]);
+            }
+        }
+        for (let j = 0; j < arrayResult.length; j++) {
+            sum += arrayResult[j];
+        }
+        result = sum / arrayResult.length;
+        alert("Kết quả tính trung bình là " + "(" + arrayResult.join("+") + ")" + " / " + "3" + " = " + result);
+    }
+</script>
+</body>
+</html>
