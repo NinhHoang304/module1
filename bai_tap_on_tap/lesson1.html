@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputWidthOfArray = +prompt('Nhập vào chiều dài mảng số nguyên');
+    let array = [];
+    let result = 0;
+
+    function getNumberInteger(width) {
+        let number = 0;
+        for (let i = 0; i < width; i++) {
+            number = parseFloat(prompt('Nhập vào 1 số nguyên bất kì ' + i));
+            array.push(number);
+        }
+        document.write('Hiển thị các phần tử đã nhập vào mảng số nguyên ' + array + "<br>");
+    }
+
+    getNumberInteger(inputWidthOfArray);
+
+    function averageOfArray(arr) {
+        let sum = 0;
+        let averageArray = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (i % 2 === 0 && arr[i] % 2 !== 0) {
+                sum += arr[i];
+                averageArray.push(arr[i]);
+            }
+        }
+        result = sum / averageArray.length;
+        if (sum !== 0){
+            document.write('Kết quả tính trung bình là: ' + "(" + averageArray.join("+") + ")" + " / " + "3" + " = " + result + "<br>")
+        }else {
+            document.write('Không có số nguyên nào thỏa mãn điều kiện để tính trung bình' + "<br>");
+        }
+    }
+
+    averageOfArray(array);
+
+    function findMaxNumber(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i]
+            }
+        }
+        document.write("Số nguyên lớn nhất trong mảng là " + max + "<br>");
+    }
+
+    findMaxNumber(array);
+
+    function findMinIndexNumber(arr) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i]
+            }
+        }
+        let arrayOfMinNumber = [];
+        let arrayOfMinIndex = [];
+        for (let i = 0; i < arr.length ; i++) {
+            if (arr[i] === min){
+                arrayOfMinNumber.push(arr[i]);
+                arrayOfMinIndex.push(i);
+            }
+        }
+        document.write("Số nguyên nhỏ nhất trong mảng là " + min + " Tại vị trí " + arrayOfMinIndex + "<br>");
+    }
+
+    findMinIndexNumber(array);
+    
+    function perfectSquare(arr) {
+        let arrayTemp = [];
+        for (let i = 0; i < arr.length ; i++) {
+            if (Number.isInteger((Math.sqrt(arr[i])))){
+                arrayTemp.push(arr[i]);
+            }
+        }
+        document.write("Các số chính phương trong mảng là " + arrayTemp + "<br>");
+    }
+    perfectSquare(array)
+
+    function checkPrime(number) {
+        let flag = true
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag === true && number >= 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function displayPrimeOfArray(arr) {
+        let arrayPrime = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (checkPrime(arr[i])) {
+                arrayPrime.push(arr[i]);
+            }
+        }
+        document.write("Các số nguyên tố trong mảng là " + arrayPrime + "<br>");
+    }
+
+    displayPrimeOfArray(array);
+
+    function replaceNegativeElementOfArray(arr) {
+        let arrayReplace = [];
+        let temp = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                temp = 0;
+                arrayReplace.push(temp);
+            } else if (arr[i] >= 0) {
+                arrayReplace.push(arr[i]);
+            }
+        }
+        document.write('Thay thế các phần tử âm trong mảng ' + array + " = " + arrayReplace + "<br>");
+    }
+
+    replaceNegativeElementOfArray(array);
+
+    function eraseNegativeEleOfArray(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                arr.splice(i, 1);
+                i--;
+            }
+        }
+        document.write('Xóa các phần tử âm trong mảng ' + arr + "<br>");
+    }
+
+    eraseNegativeEleOfArray(array);
+
+    function sortArray(arr) {
+        document.write("Sắp xếp mảng theo thứ tự tăng dần " + arr.sort(function (a, b) {
+            return a - b
+        }));
+    }
+
+    sortArray(array);
+</script>
+</body>
+</html>

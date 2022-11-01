@@ -31,17 +31,17 @@
             a = b;
             b = fibonacci;
         }
-        console.log(fibonacciArray);
+        alert("Mảng các số fibonacci " + fibonacciArray);
         let arrayResult = [];
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < fibonacciArray.length; j++) {
                 if (arr[i] === fibonacciArray[j]) {
                     arrayResult.push(arr[i]);
-                    arrayResult.splice(arr[i], 1);
+                    break;
                 }
             }
         }
-        alert("Những số fibonacci trong mảng nhập vào là: " + arrayResult.sort());
+        alert("Những số fibonacci trong mảng nhập vào là: " + arrayResult.sort(function(a, b){return a - b}));
     }
 
     getFibonacci(array);

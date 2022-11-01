@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Quản lý tài khoản ngân hàng</h1>
+<input type="text" id="inputAccount" placeholder="Thêm 1 tài khoản ngân hàng">
+<input type="button" value="Submit" onclick="submit()">
+<h3>Danh sách tài khoản khách hàng</h3>
+<table id="list">
+
+</table>
+
+<script>
+    class BankId {
+        constructor(accountCode, accountName, bankName, totalMoney) {
+            this.accountCode = accountCode;
+            this.accountName = accountName;
+            this.bankName = bankName;
+            this.totalMoney = totalMoney;
+        }
+        getAccountCode(){
+            return this.accountCode;
+        }
+        setAccountCode(string){
+            this.accountCode = string;
+        }
+        getAccountName(){
+            return this.accountName;
+        }
+        setAccountName(string){
+            this.accountName = string;
+        }
+        getBankName(){
+            return this.bankName;
+        }
+        setBankName(string){
+            this.bankName = string;
+        }
+        getToTalMoney(){
+            return this.totalMoney;
+        }
+        setTotalMoney(number){
+            this.totalMoney = number;
+        }
+    }
+    function displayListAccount() {
+        
+    }
+</script>
+</body>
+</html>

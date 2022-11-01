@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputWidth = +prompt('Nhập chiều dài mảng ');
+    let array = [];
+
+    function checkInputWidthOfArray(width) {
+        if (width > 0) {
+            getNumberInteger(inputWidth, array);
+            checkSymmetryOfArray(array);
+        } else {
+            alert('Vui lòng refresh trang để nhập lại chiều dài mảng lớn hơn 0');
+        }
+    }
+
+    checkInputWidthOfArray(inputWidth);
+
+    function getNumberInteger(width, arr) {
+        let number = 0;
+        for (let i = 0; i < width; i++) {
+            number = +prompt('Nhập vào 1 số nguyên ' + i);
+            arr.push(number);
+        }
+        document.write("Các phần tử đã nhập vào mảng là: " + arr + "<br>");
+    }
+
+    function checkSymmetryOfArray(arr) {
+        let flag = true;
+        let count = arr.length - 1;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === arr[(count - i)]) {
+                flag = true;
+            } else if (arr[i] !== arr[(count - i)]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            document.write('Mảng ' + arr + " là mảng đối xứng");
+        } else {
+            document.write('Mảng ' + arr + " là mảng không đối xứng");
+        }
+    }
+</script>
+</body>
+</html>
