@@ -8,9 +8,29 @@
 <script>
     let inputWidthOfArray = +prompt('Nhập chiều dài cho mảng ');
     let array = [];
-    function f() {
-
+    function getInteger(width, arr) {
+        let number = 0;
+        for (let i = 0; i < width ; i++) {
+            number = +prompt("Nhập vào 1 số nguyên bất kì tại vị trí " + i);
+            arr.push(number);
+        }
+        alert('Các phẩn tử đã nhập vào mảng là ' + arr);
     }
+    getInteger(inputWidthOfArray, array);
+    function splitArray(arr) {
+        let arrayEven = [];
+        let arrayOdd = [];
+        for (let i = 0; i < arr.length ; i++) {
+            if (arr[i] %2 === 0){
+                arrayEven.push(arr[i]);
+            }else {
+                arrayOdd.push(arr[i]);
+            }
+        }
+        alert("Các số chẵn trong mảng là " + arrayEven);
+        alert("Các số lẻ trong mảng là " + arrayOdd);
+    }
+    splitArray(array);
 </script>
 </body>
 </html>
