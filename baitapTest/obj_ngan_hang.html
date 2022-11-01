@@ -5,13 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Quản lý tài khoản ngân hàng</h1>
-<input type="text" id="inputAccount" placeholder="Thêm 1 tài khoản ngân hàng">
-<input type="button" value="Submit" onclick="submit()">
-<h3>Danh sách tài khoản khách hàng</h3>
-<table id="list">
-
-</table>
+<input type="button" value="Add Bank Id" onclick="addBankId()">
 
 <script>
     class BankId {
@@ -21,34 +15,71 @@
             this.bankName = bankName;
             this.totalMoney = totalMoney;
         }
-        getAccountCode(){
+
+        getAccountCode() {
             return this.accountCode;
         }
-        setAccountCode(string){
+
+        setAccountCode(string) {
             this.accountCode = string;
         }
-        getAccountName(){
+
+        getAccountName() {
             return this.accountName;
         }
-        setAccountName(string){
+
+        setAccountName(string) {
             this.accountName = string;
         }
-        getBankName(){
+
+        getBankName() {
             return this.bankName;
         }
-        setBankName(string){
+
+        setBankName(string) {
             this.bankName = string;
         }
-        getToTalMoney(){
+
+        getToTalMoney() {
             return this.totalMoney;
         }
-        setTotalMoney(number){
+
+        setTotalMoney(number) {
             this.totalMoney = number;
         }
+
+        toString() {
+
+        }
     }
-    function displayListAccount() {
-        
+    let bankId = new BankId();
+    function addBankId (){
+        bankId.setAccountCode(prompt('Nhập mã tài khoản: '));
+        bankId.setAccountName(prompt('Nhập tên tài khoản: '));
+        bankId.setBankName(prompt('Nhập tên ngân hàng: '));
+        bankId.setTotalMoney(+prompt('Nhập tổng số tiền gửi: '));
+        document.writeln(bankId.getAccountCode() + " | ");
+        document.writeln(bankId.getAccountName() + " | ");
+        document.writeln(bankId.getBankName() + " | ");
+        document.writeln(bankId.getToTalMoney());
     }
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

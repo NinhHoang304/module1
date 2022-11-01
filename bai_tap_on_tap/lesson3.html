@@ -8,9 +8,14 @@
 <script>
     let inputWidthOfArray = +prompt("Nhập chiều dài mảng");
     let array = [];
+
     function getElementsNotDuplicate(width, arr) {
-        for (let i = 0; i < width ; i++) {
-            arr[i] = prompt('Nhập vào phần tử bất kỳ ');
+        for (let i = 0; i < width; i++) {
+            arr[i] = +prompt('Nhập vào phần tử bất kỳ ');
+            // while (arr.indexOf(arr[i]) !== -1) {
+            //     arr[i] = +prompt('Bạn đã nhập phần tử này rồi, hãy nhập lại ');
+            // }
+            // arr.push(arr[i]);
             for (let j = 0; j < i; j++) {
                 if (arr[i] === arr[j]){
                     alert('Bạn đã nhập phần tử này rồi, hãy nhập lại');
@@ -21,6 +26,7 @@
         }
         alert('Các phần tử trong mảng là ' + arr);
     }
+
     getElementsNotDuplicate(inputWidthOfArray, array)
 
 </script>
