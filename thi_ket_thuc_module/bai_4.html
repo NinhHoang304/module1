@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Add Product" onclick="addProduct()">
+<script>
+    class Product {
+        constructor(productCode, productName, brandName, price) {
+            this.productCode = productCode;
+            this.productName = productName;
+            this.brandName = brandName;
+            this.price = price;
+        }
+
+        getProductCode() {
+            return this.accountCode;
+        }
+
+        setProductCode(string) {
+            this.accountCode = string;
+        }
+
+        getProductName() {
+            return this.accountName;
+        }
+
+        setProductName(string) {
+            this.accountName = string;
+        }
+
+        getBrandName() {
+            return this.bankName;
+        }
+
+        setBrandName(string) {
+            this.bankName = string;
+        }
+
+        getPrice() {
+            return this.totalMoney;
+        }
+
+        setPrice(number) {
+            this.totalMoney = number;
+        }
+
+        toString() {
+            this.productCode = prompt('Nhập vào mã sản phẩm ');
+            this.productName = prompt('Nhập vào tên sản phẩm ');
+            this.brandName = prompt('Nhập vào tên hãng sản xuất ');
+            this.price = parseFloat(prompt('Nhập vào giá sản phẩm '));
+        }
+    }
+
+    let product = new Product();
+
+    function addProduct() {
+        for (let i = 0; i < 2 ; i++) {
+            product.setProductCode(prompt('Nhập vào mã sản phẩm '));
+            product.setProductName(prompt('Nhập vào tên sản phẩm '));
+            product.setBrandName(prompt('Nhập vào tên hãng sản xuất '));
+            product.setPrice(prompt('Nhập vào giá sản phẩm '));
+            document.writeln(product.getProductCode() + " | ");
+            document.writeln(product.getProductName() + " | ");
+            document.writeln(product.getBrandName() + " | ");
+            document.writeln(product.getPrice() + "<br>");
+        }
+    }
+</script>
+</body>
+</html>

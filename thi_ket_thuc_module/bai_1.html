@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputWidthOfArray = +prompt('Nhập vào chiều dài của mảng ');
+    let array = [];
+    function checkInput(width, arr) {
+        if (width > 0 && width <= 20){
+            getCharacter(width, arr);
+            printChar(arr);
+        }else {
+            while (width <= 0){
+                alert('Vui lòng nhập chiều dài mảng lớn hơn 0')
+                width = +prompt('Nhập lại chiều dài cho mảng ');
+            }
+            while (width > 20){
+                alert('Vui lòng nhập chiều dài mảng nhỏ hơn 20')
+                width = +prompt('Nhập lại chiều dài cho mảng ');
+            }
+            getCharacter(width, arr);
+            printChar(arr);
+        }
+    }
+    checkInput(inputWidthOfArray, array);
+    function getCharacter(width, arr) {
+        let char = "";
+        for (let i = 0; i < width ; i++) {
+            char = prompt('Nhập vào ký tự bất kì ' + i);
+            arr.push(char);
+        }
+        document.write("Các phần tử đã nhập vào mảng là " + arr + "<br>");
+    }
+    function printChar(arr) {
+        let arrayChar = [];
+        let arrayCount = [];
+        for (let i = 0; i < arr.length ; i++) {
+            if (arrayChar.indexOf(arr[i]) === -1){
+                if (arrayChar[i] !== ""){
+                    arrayChar.push(arr[i]);
+                }
+            }
+        }
+        document.writeln("Các ký tự là " + arrayChar);
+    }
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

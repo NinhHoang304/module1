@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputWidthOfArray = +prompt('Nhập vào chiều dài của mảng ');
+    let array = [];
+
+    function checkInputWidthOfArray(width, arr) {
+        if (width > 0) {
+            getNumberInteger(width, arr);
+            displayPrimeOfArray(arr);
+        } else {
+            alert('Vui lòng refresh trang để nhập lại chiều dài mảng lớn hơn 0');
+        }
+    }
+
+    checkInputWidthOfArray(inputWidthOfArray, array);
+
+    function getNumberInteger(width) {
+        let number = 0;
+        for (let i = 0; i < width; i++) {
+            number = parseFloat(prompt('Nhập vào 1 số nguyên bất kì ' + i));
+            array.push(number);
+        }
+        document.write('Hiển thị các phần tử đã nhập vào mảng số nguyên ' + array + "<br>");
+    }
+
+    function checkPrime(number) {
+        let flag = true
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag === true && number >= 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function displayPrimeOfArray(arr) {
+        let arrayPrime = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (checkPrime(arr[i])) {
+                arrayPrime.push(arr[i]);
+            }
+        }
+        document.write("Các số nguyên tố trong mảng là " + arrayPrime.sort(function(a, b){return a - b})  + "<br>");
+    }
+
+</script>
+</body>
+</html>

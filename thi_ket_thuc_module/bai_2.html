@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputWidth = +prompt('Nhập chiều dài chuỗi ');
+    let array = [];
+
+    function checkInputWidthOfArray(width, arr) {
+        if (width > 0) {
+            getCharacter(width, arr);
+            checkSymmetryOfArray(arr);
+        } else {
+            alert('Vui lòng refresh trang để nhập lại chiều dài chuỗi lớn hơn 0');
+        }
+    }
+
+    checkInputWidthOfArray(inputWidth, array);
+
+    function getCharacter(width, arr) {
+        let char = 0;
+        for (let i = 0; i < width; i++) {
+            char = prompt('Nhập vào 1 ký tự bất kỳ ' + i);
+            arr.push(char);
+        }
+        document.write("Chuỗi đã nhập là: " + arr.join('') + "<br>");
+    }
+
+    function checkSymmetryOfArray(arr) {
+        let flag = true;
+        let count = arr.length - 1;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === arr[(count - i)]) {
+                flag = true;
+            } else if (arr[i] !== arr[(count - i)]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            document.write('Chuỗi ' + arr.join('') + " là chuỗi đối xứng");
+        } else {
+            document.write('Chuỗi ' + arr.join('') + " là chuỗi không đối xứng");
+        }
+    }
+
+</script>
+</body>
+</html>
